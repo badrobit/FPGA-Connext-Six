@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="pwn_bot">
+		<CBX_INST_ENTRY INSTANCE_NAME="|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_ou31.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_ou31.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

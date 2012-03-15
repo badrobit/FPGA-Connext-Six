@@ -1,0 +1,693 @@
+Analysis & Synthesis report for pwn_bot
+Wed Mar 14 21:28:14 2012
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram
+ 13. Source assignments for Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram
+ 14. Parameter Settings for User Entity Instance: key_controller:comb_3
+ 15. Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6
+ 16. Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer
+ 17. Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters
+ 18. Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO
+ 19. Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO
+ 20. Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer
+ 21. Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters
+ 22. Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO
+ 23. Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO
+ 24. scfifo Parameter Settings by Entity Instance
+ 25. Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters"
+ 26. Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO"
+ 27. Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters"
+ 28. Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6"
+ 29. Port Connectivity Checks: "key_controller:comb_3"
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Mar 14 21:28:14 2012          ;
+; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Full Version ;
+; Revision Name                      ; pwn_bot                                        ;
+; Top-level Entity Name              ; serial_port_test                               ;
+; Family                             ; Cyclone II                                     ;
+; Total logic elements               ; 312                                            ;
+;     Total combinational functions  ; 311                                            ;
+;     Dedicated logic registers      ; 219                                            ;
+; Total registers                    ; 219                                            ;
+; Total pins                         ; 7                                              ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 2,048                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; serial_port_test   ; pwn_bot            ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                    ;
++-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+
+; key_controller.v                  ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/key_controller.v                  ;
+; serial_port_test.v                ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/serial_port_test.v                ;
+; Altera_UP_SYNC_FIFO.v             ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/Altera_UP_SYNC_FIFO.v             ;
+; Altera_UP_RS232_Out_Serializer.v  ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/Altera_UP_RS232_Out_Serializer.v  ;
+; Altera_UP_RS232_In_Deserializer.v ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/Altera_UP_RS232_In_Deserializer.v ;
+; Altera_UP_RS232_Counters.v        ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/Altera_UP_RS232_Counters.v        ;
+; Altera_UP_Avalon_RS232.v          ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/Altera_UP_Avalon_RS232.v          ;
+; scfifo.tdf                        ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/scfifo.tdf                                                    ;
+; a_regfifo.inc                     ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_regfifo.inc                                                 ;
+; a_dpfifo.inc                      ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_dpfifo.inc                                                  ;
+; a_i2fifo.inc                      ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_i2fifo.inc                                                  ;
+; a_fffifo.inc                      ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_fffifo.inc                                                  ;
+; a_f2fifo.inc                      ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_f2fifo.inc                                                  ;
+; aglobal110.inc                    ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/aglobal110.inc                                                ;
+; db/scfifo_ou31.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/db/scfifo_ou31.tdf                ;
+; db/a_dpfifo_bm31.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/db/a_dpfifo_bm31.tdf              ;
+; db/altsyncram_1a81.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/db/altsyncram_1a81.tdf            ;
+; db/cmpr_2o8.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/db/cmpr_2o8.tdf                   ;
+; db/cntr_d5b.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/db/cntr_d5b.tdf                   ;
+; db/cntr_q57.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/db/cntr_q57.tdf                   ;
+; db/cntr_e5b.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-78f13ea/db/cntr_e5b.tdf                   ;
++-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 312      ;
+;                                             ;          ;
+; Total combinational functions               ; 311      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 98       ;
+;     -- 3 input functions                    ; 50       ;
+;     -- <=2 input functions                  ; 163      ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 193      ;
+;     -- arithmetic mode                      ; 118      ;
+;                                             ;          ;
+; Total registers                             ; 219      ;
+;     -- Dedicated logic registers            ; 219      ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 7        ;
+; Total memory bits                           ; 2048     ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 235      ;
+; Total fan-out                               ; 1811     ;
+; Average fan-out                             ; 3.27     ;
++---------------------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                         ;
++---------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                              ; Library Name ;
++---------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |serial_port_test                                             ; 311 (10)          ; 219 (5)      ; 2048        ; 0            ; 0       ; 0         ; 7    ; 0            ; |serial_port_test                                                                                                                                                                                                                ;              ;
+;    |Altera_UP_Avalon_RS232:comb_6|                            ; 206 (24)          ; 149 (24)     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6                                                                                                                                                                                  ;              ;
+;       |Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer| ; 95 (21)           ; 66 (18)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer                                                                                                                            ;              ;
+;          |Altera_UP_RS232_Counters:RS232_In_Counters|         ; 22 (22)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters                                                                                 ;              ;
+;          |Altera_UP_SYNC_FIFO:RS232_In_FIFO|                  ; 52 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO                                                                                          ;              ;
+;             |scfifo:Sync_FIFO|                                ; 52 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO                                                                         ;              ;
+;                |scfifo_ou31:auto_generated|                   ; 52 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated                                              ;              ;
+;                   |a_dpfifo_bm31:dpfifo|                      ; 52 (29)           ; 33 (13)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo                         ;              ;
+;                      |altsyncram_1a81:FIFOram|                ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram ;              ;
+;                      |cntr_d5b:rd_ptr_msb|                    ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb     ;              ;
+;                      |cntr_e5b:wr_ptr|                        ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr         ;              ;
+;                      |cntr_q57:usedw_counter|                 ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter  ;              ;
+;       |Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|   ; 87 (15)           ; 59 (11)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer                                                                                                                              ;              ;
+;          |Altera_UP_RS232_Counters:RS232_Out_Counters|        ; 21 (21)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters                                                                                  ;              ;
+;          |Altera_UP_SYNC_FIFO:RS232_Out_FIFO|                 ; 51 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO                                                                                           ;              ;
+;             |scfifo:Sync_FIFO|                                ; 51 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO                                                                          ;              ;
+;                |scfifo_ou31:auto_generated|                   ; 51 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated                                               ;              ;
+;                   |a_dpfifo_bm31:dpfifo|                      ; 51 (28)           ; 33 (13)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo                          ;              ;
+;                      |altsyncram_1a81:FIFOram|                ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram  ;              ;
+;                      |cntr_d5b:rd_ptr_msb|                    ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb      ;              ;
+;                      |cntr_e5b:wr_ptr|                        ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr          ;              ;
+;                      |cntr_q57:usedw_counter|                 ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter   ;              ;
+;    |key_controller:comb_3|                                    ; 95 (95)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|key_controller:comb_3                                                                                                                                                                                          ;              ;
++---------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                                                                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 8            ; 128          ; 8            ; 1024 ; None ;
+; Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 8            ; 128          ; 8            ; 1024 ; None ;
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                ;
++----------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                            ; Reason for Removal                     ;
++----------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[0..6] ; Lost fanout                            ;
+; Altera_UP_Avalon_RS232:comb_6|read_interrupt_en                                                          ; Lost fanout                            ;
+; Altera_UP_Avalon_RS232:comb_6|write_interrupt_en                                                         ; Lost fanout                            ;
+; wait_state[2]                                                                                            ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 10                                                                   ;                                        ;
++----------------------------------------------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 219   ;
+; Number of registers using Synchronous Clear  ; 98    ;
+; Number of registers using Synchronous Load   ; 49    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 59    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                                                                                                                       ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|data_in_shift_reg[2]                                       ;                            ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|data_out_shift_reg[1]                                        ;                            ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters|baud_counter[1]  ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters|bit_counter[0]   ;                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|data_to_uart[4]                                                                                                  ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters|bit_counter[1]  ;                            ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters|baud_counter[0] ;                            ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; |serial_port_test|wait_state[2]                                                                                                                                  ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                                                                      ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                                                       ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                                                                     ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                                                      ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: key_controller:comb_3 ;
++-----------------+----------+---------------------------------------+
+; Parameter Name  ; Value    ; Type                                  ;
++-----------------+----------+---------------------------------------+
+; HOLD_INTERVAL   ; 50000000 ; Signed Integer                        ;
+; REPEAT_INTERVAL ; 1000000  ; Signed Integer                        ;
++-----------------+----------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6 ;
++----------------------+-----------+-----------------------------------------+
+; Parameter Name       ; Value     ; Type                                    ;
++----------------------+-----------+-----------------------------------------+
+; BAUD_COUNTER_WIDTH   ; 9         ; Signed Integer                          ;
+; BAUD_TICK_INCREMENT  ; 000000001 ; Unsigned Binary                         ;
+; BAUD_TICK_COUNT      ; 110110001 ; Unsigned Binary                         ;
+; HALF_BAUD_TICK_COUNT ; 011011000 ; Unsigned Binary                         ;
+; TOTAL_DATA_WIDTH     ; 11        ; Signed Integer                          ;
+; DATA_WIDTH           ; 8         ; Signed Integer                          ;
+; ODD_PARITY           ; 1         ; Unsigned Binary                         ;
++----------------------+-----------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer ;
++----------------------+-----------+-----------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value     ; Type                                                                                          ;
++----------------------+-----------+-----------------------------------------------------------------------------------------------+
+; BAUD_COUNTER_WIDTH   ; 9         ; Signed Integer                                                                                ;
+; BAUD_TICK_INCREMENT  ; 000000001 ; Unsigned Binary                                                                               ;
+; BAUD_TICK_COUNT      ; 110110001 ; Unsigned Binary                                                                               ;
+; HALF_BAUD_TICK_COUNT ; 011011000 ; Unsigned Binary                                                                               ;
+; TOTAL_DATA_WIDTH     ; 11        ; Signed Integer                                                                                ;
+; DATA_WIDTH           ; 8         ; Signed Integer                                                                                ;
++----------------------+-----------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters ;
++----------------------+-----------+------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value     ; Type                                                                                                                                     ;
++----------------------+-----------+------------------------------------------------------------------------------------------------------------------------------------------+
+; BAUD_COUNTER_WIDTH   ; 9         ; Signed Integer                                                                                                                           ;
+; BAUD_TICK_INCREMENT  ; 000000001 ; Unsigned Binary                                                                                                                          ;
+; BAUD_TICK_COUNT      ; 110110001 ; Unsigned Binary                                                                                                                          ;
+; HALF_BAUD_TICK_COUNT ; 011011000 ; Unsigned Binary                                                                                                                          ;
+; TOTAL_DATA_WIDTH     ; 11        ; Signed Integer                                                                                                                           ;
++----------------------+-----------+------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                                                                                                            ;
+; DATA_DEPTH     ; 128   ; Signed Integer                                                                                                                            ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                                                                                                        ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                                                                                                                  ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                                                                                                                ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                                                                                                                ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                                                                                                              ;
+; lpm_width               ; 8           ; Signed Integer                                                                                                                              ;
+; LPM_NUMWORDS            ; 128         ; Signed Integer                                                                                                                              ;
+; LPM_WIDTHU              ; 7           ; Signed Integer                                                                                                                              ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                                                                                                     ;
+; UNDERFLOW_CHECKING      ; OFF         ; Untyped                                                                                                                                     ;
+; OVERFLOW_CHECKING       ; OFF         ; Untyped                                                                                                                                     ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                                                                                                     ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                                                                                                                     ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                                                                                                     ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                                                                                                     ;
+; USE_EAB                 ; ON          ; Untyped                                                                                                                                     ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                                                                                                     ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                                                                                                                     ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                                                                                                     ;
+; CBXI_PARAMETER          ; scfifo_ou31 ; Untyped                                                                                                                                     ;
++-------------------------+-------------+---------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer ;
++----------------------+-----------+---------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value     ; Type                                                                                        ;
++----------------------+-----------+---------------------------------------------------------------------------------------------+
+; BAUD_COUNTER_WIDTH   ; 9         ; Signed Integer                                                                              ;
+; BAUD_TICK_INCREMENT  ; 000000001 ; Unsigned Binary                                                                             ;
+; BAUD_TICK_COUNT      ; 110110001 ; Unsigned Binary                                                                             ;
+; HALF_BAUD_TICK_COUNT ; 011011000 ; Unsigned Binary                                                                             ;
+; TOTAL_DATA_WIDTH     ; 11        ; Signed Integer                                                                              ;
+; DATA_WIDTH           ; 8         ; Signed Integer                                                                              ;
++----------------------+-----------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters ;
++----------------------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name       ; Value     ; Type                                                                                                                                    ;
++----------------------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; BAUD_COUNTER_WIDTH   ; 9         ; Signed Integer                                                                                                                          ;
+; BAUD_TICK_INCREMENT  ; 000000001 ; Unsigned Binary                                                                                                                         ;
+; BAUD_TICK_COUNT      ; 110110001 ; Unsigned Binary                                                                                                                         ;
+; HALF_BAUD_TICK_COUNT ; 011011000 ; Unsigned Binary                                                                                                                         ;
+; TOTAL_DATA_WIDTH     ; 11        ; Signed Integer                                                                                                                          ;
++----------------------+-----------+-----------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                                                                                                           ;
+; DATA_DEPTH     ; 128   ; Signed Integer                                                                                                                           ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO ;
++-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                                                                                                       ;
++-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                                                                                                                 ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                                                                                                               ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                                                                                                               ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                                                                                                             ;
+; lpm_width               ; 8           ; Signed Integer                                                                                                                             ;
+; LPM_NUMWORDS            ; 128         ; Signed Integer                                                                                                                             ;
+; LPM_WIDTHU              ; 7           ; Signed Integer                                                                                                                             ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                                                                                                    ;
+; UNDERFLOW_CHECKING      ; OFF         ; Untyped                                                                                                                                    ;
+; OVERFLOW_CHECKING       ; OFF         ; Untyped                                                                                                                                    ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                                                                                                    ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                                                                                                                    ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                                                                                                    ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                                                                                                    ;
+; USE_EAB                 ; ON          ; Untyped                                                                                                                                    ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                                                                                                    ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                                                                                                                    ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                                                                                                    ;
+; CBXI_PARAMETER          ; scfifo_ou31 ; Untyped                                                                                                                                    ;
++-------------------------+-------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                                                                                                                        ;
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Name                       ; Value                                                                                                                                  ;
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Number of entity instances ; 2                                                                                                                                      ;
+; Entity Instance            ; Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO ;
+;     -- FIFO Type           ; Single Clock                                                                                                                           ;
+;     -- lpm_width           ; 8                                                                                                                                      ;
+;     -- LPM_NUMWORDS        ; 128                                                                                                                                    ;
+;     -- LPM_SHOWAHEAD       ; ON                                                                                                                                     ;
+;     -- USE_EAB             ; ON                                                                                                                                     ;
+; Entity Instance            ; Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO  ;
+;     -- FIFO Type           ; Single Clock                                                                                                                           ;
+;     -- lpm_width           ; 8                                                                                                                                      ;
+;     -- LPM_NUMWORDS        ; 128                                                                                                                                    ;
+;     -- LPM_SHOWAHEAD       ; ON                                                                                                                                     ;
+;     -- USE_EAB             ; ON                                                                                                                                     ;
++----------------------------+----------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters" ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------------------------------+
+; Port                    ; Type   ; Severity ; Details                                                                                                     ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------------------------------+
+; baud_clock_falling_edge ; Output ; Info     ; Explicitly unconnected                                                                                      ;
++-------------------------+--------+----------+-------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO"                                                                ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; write_data ; Input ; Warning  ; Input port expression (9 bits) is wider than the input port (8 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters" ;
++------------------------+--------+----------+---------------------------------------------------------------------------------------------------------------+
+; Port                   ; Type   ; Severity ; Details                                                                                                       ;
++------------------------+--------+----------+---------------------------------------------------------------------------------------------------------------+
+; baud_clock_rising_edge ; Output ; Info     ; Explicitly unconnected                                                                                        ;
++------------------------+--------+----------+---------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6"                                                                                                                                 ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                                                                                            ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; address          ; Input  ; Info     ; Stuck at GND                                                                                                                                       ;
+; chipselect       ; Input  ; Info     ; Stuck at VCC                                                                                                                                       ;
+; byteenable       ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "byteenable[3..3]" will be connected to GND. ;
+; byteenable[2..1] ; Input  ; Info     ; Stuck at GND                                                                                                                                       ;
+; byteenable[1]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                       ;
+; writedata[31..8] ; Input  ; Info     ; Stuck at GND                                                                                                                                       ;
+; readdata[31..23] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                ;
+; readdata[15..8]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                ;
+; irq              ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                           ;
++------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_controller:comb_3"                                                                      ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; key_released ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Mar 14 21:28:04 2012
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwn_bot -c pwn_bot
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Found 1 design units, including 1 entities, in source file key_controller.v
+    Info: Found entity 1: key_controller
+Info: Found 1 design units, including 1 entities, in source file serial_port_test.v
+    Info: Found entity 1: serial_port_test
+Info: Found 1 design units, including 1 entities, in source file altera_up_sync_fifo.v
+    Info: Found entity 1: Altera_UP_SYNC_FIFO
+Info: Found 1 design units, including 1 entities, in source file altera_up_rs232_out_serializer.v
+    Info: Found entity 1: Altera_UP_RS232_Out_Serializer
+Info: Found 1 design units, including 1 entities, in source file altera_up_rs232_in_deserializer.v
+    Info: Found entity 1: Altera_UP_RS232_In_Deserializer
+Info: Found 1 design units, including 1 entities, in source file altera_up_rs232_counters.v
+    Info: Found entity 1: Altera_UP_RS232_Counters
+Info: Found 1 design units, including 1 entities, in source file altera_up_avalon_rs232.v
+    Info: Found entity 1: Altera_UP_Avalon_RS232
+Info: Found 1 design units, including 1 entities, in source file modify_clock.v
+    Info: Found entity 1: modify_clock
+Warning (10236): Verilog HDL Implicit Net warning at key_controller.v(31): created implicit net for "key_held"
+Warning (10236): Verilog HDL Implicit Net warning at key_controller.v(33): created implicit net for "key_repeat"
+Warning (10236): Verilog HDL Implicit Net warning at serial_port_test.v(26): created implicit net for "serial_read_available"
+Critical Warning (10846): Verilog HDL Instantiation warning at serial_port_test.v(15): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at serial_port_test.v(40): instance has no name
+Info: Elaborating entity "serial_port_test" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at serial_port_test.v(57): truncated value with size 32 to match size of target (3)
+Info: Elaborating entity "key_controller" for hierarchy "key_controller:comb_3"
+Info: Elaborating entity "Altera_UP_Avalon_RS232" for hierarchy "Altera_UP_Avalon_RS232:comb_6"
+Warning (10036): Verilog HDL or VHDL warning at Altera_UP_Avalon_RS232.v(79): object "write_data_parity" assigned a value but never read
+Info: Elaborating entity "Altera_UP_RS232_In_Deserializer" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer"
+Info: Elaborating entity "Altera_UP_RS232_Counters" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters"
+Info: Elaborating entity "Altera_UP_SYNC_FIFO" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO"
+Info: Elaborating entity "scfifo" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO"
+Info: Elaborated megafunction instantiation "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO"
+Info: Instantiated megafunction "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO" with the following parameter:
+    Info: Parameter "add_ram_output_register" = "OFF"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_numwords" = "128"
+    Info: Parameter "lpm_showahead" = "ON"
+    Info: Parameter "lpm_type" = "scfifo"
+    Info: Parameter "lpm_width" = "8"
+    Info: Parameter "lpm_widthu" = "7"
+    Info: Parameter "overflow_checking" = "OFF"
+    Info: Parameter "underflow_checking" = "OFF"
+    Info: Parameter "use_eab" = "ON"
+Info: Found 1 design units, including 1 entities, in source file db/scfifo_ou31.tdf
+    Info: Found entity 1: scfifo_ou31
+Info: Elaborating entity "scfifo_ou31" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/a_dpfifo_bm31.tdf
+    Info: Found entity 1: a_dpfifo_bm31
+Info: Elaborating entity "a_dpfifo_bm31" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_1a81.tdf
+    Info: Found entity 1: altsyncram_1a81
+Info: Elaborating entity "altsyncram_1a81" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram"
+Info: Found 1 design units, including 1 entities, in source file db/cmpr_2o8.tdf
+    Info: Found entity 1: cmpr_2o8
+Info: Elaborating entity "cmpr_2o8" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:almost_full_comparer"
+Info: Elaborating entity "cmpr_2o8" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:three_comparison"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_d5b.tdf
+    Info: Found entity 1: cntr_d5b
+Info: Elaborating entity "cntr_d5b" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_q57.tdf
+    Info: Found entity 1: cntr_q57
+Info: Elaborating entity "cntr_q57" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_e5b.tdf
+    Info: Found entity 1: cntr_e5b
+Info: Elaborating entity "cntr_e5b" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr"
+Info: Elaborating entity "Altera_UP_RS232_Out_Serializer" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer"
+Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: 9 registers lost all their fanouts during netlist optimizations. The first 9 are displayed below.
+    Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Altera_UP_Avalon_RS232:comb_6|read_interrupt_en" lost all its fanouts during netlist optimizations.
+    Info: Register "Altera_UP_Avalon_RS232:comb_6|write_interrupt_en" lost all its fanouts during netlist optimizations.
+Info: Generating hard_block partition "hard_block:auto_generated_inst"
+Warning: Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info: Implemented 338 device resources after synthesis - the final resource count might be different
+    Info: Implemented 6 input pins
+    Info: Implemented 1 output pins
+    Info: Implemented 315 logic cells
+    Info: Implemented 16 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 253 megabytes
+    Info: Processing ended: Wed Mar 14 21:28:14 2012
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:08
+
+

@@ -1,0 +1,1145 @@
+Quartus II
+Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+14
+1076
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+serial_port_test
+# storage
+db|pwn_bot.(0).cnf
+db|pwn_bot.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+serial_port_test.v
+dd84d74966592b11542a7b3f0af33c8
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+key_controller
+# storage
+db|pwn_bot.(1).cnf
+db|pwn_bot.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+key_controller.v
+1932b8115357de5f91edbab56bece6c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+HOLD_INTERVAL
+50000000
+PARAMETER_SIGNED_DEC
+DEF
+REPEAT_INTERVAL
+1000000
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+key_controller:comb_3
+}
+# macro_sequence
+
+# end
+# entity
+Altera_UP_Avalon_RS232
+# storage
+db|pwn_bot.(2).cnf
+db|pwn_bot.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+altera_up_avalon_rs232.v
+8437165c8296eed41cabec3dd493a7df
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+BAUD_COUNTER_WIDTH
+9
+PARAMETER_SIGNED_DEC
+DEF
+BAUD_TICK_INCREMENT
+000000001
+PARAMETER_UNSIGNED_BIN
+DEF
+BAUD_TICK_COUNT
+110110001
+PARAMETER_UNSIGNED_BIN
+DEF
+HALF_BAUD_TICK_COUNT
+011011000
+PARAMETER_UNSIGNED_BIN
+DEF
+TOTAL_DATA_WIDTH
+11
+PARAMETER_SIGNED_DEC
+DEF
+DATA_WIDTH
+8
+PARAMETER_SIGNED_DEC
+DEF
+ODD_PARITY
+1
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6
+}
+# macro_sequence
+
+# end
+# entity
+Altera_UP_RS232_In_Deserializer
+# storage
+db|pwn_bot.(3).cnf
+db|pwn_bot.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+altera_up_rs232_in_deserializer.v
+dc8978dbe7ebb82c99a69a733f37c70
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+BAUD_COUNTER_WIDTH
+9
+PARAMETER_SIGNED_DEC
+USR
+BAUD_TICK_INCREMENT
+000000001
+PARAMETER_UNSIGNED_BIN
+USR
+BAUD_TICK_COUNT
+110110001
+PARAMETER_UNSIGNED_BIN
+USR
+HALF_BAUD_TICK_COUNT
+011011000
+PARAMETER_UNSIGNED_BIN
+USR
+TOTAL_DATA_WIDTH
+11
+PARAMETER_SIGNED_DEC
+USR
+DATA_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer
+}
+# macro_sequence
+
+# end
+# entity
+Altera_UP_RS232_Counters
+# storage
+db|pwn_bot.(4).cnf
+db|pwn_bot.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+altera_up_rs232_counters.v
+c32de920f9c45080c13bb8e70d1cdfe
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+BAUD_COUNTER_WIDTH
+9
+PARAMETER_SIGNED_DEC
+USR
+BAUD_TICK_INCREMENT
+000000001
+PARAMETER_UNSIGNED_BIN
+USR
+BAUD_TICK_COUNT
+110110001
+PARAMETER_UNSIGNED_BIN
+USR
+HALF_BAUD_TICK_COUNT
+011011000
+PARAMETER_UNSIGNED_BIN
+USR
+TOTAL_DATA_WIDTH
+11
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters
+}
+# macro_sequence
+
+# end
+# entity
+Altera_UP_SYNC_FIFO
+# storage
+db|pwn_bot.(5).cnf
+db|pwn_bot.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+altera_up_sync_fifo.v
+20567b3d2dff7951a690116468ff9d
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+DATA_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+DATA_DEPTH
+128
+PARAMETER_SIGNED_DEC
+USR
+ADDR_WIDTH
+7
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO
+}
+# macro_sequence
+
+# end
+# entity
+scfifo
+# storage
+db|pwn_bot.(6).cnf
+db|pwn_bot.(6).cnf
+# case_insensitive
+# source_file
+scfifo.tdf
+6c5618488fb55065464e8a851e68c3
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+lpm_width
+8
+PARAMETER_SIGNED_DEC
+USR
+LPM_NUMWORDS
+128
+PARAMETER_SIGNED_DEC
+USR
+LPM_WIDTHU
+7
+PARAMETER_SIGNED_DEC
+USR
+LPM_SHOWAHEAD
+ON
+PARAMETER_UNKNOWN
+USR
+UNDERFLOW_CHECKING
+OFF
+PARAMETER_UNKNOWN
+USR
+OVERFLOW_CHECKING
+OFF
+PARAMETER_UNKNOWN
+USR
+ALLOW_RWCYCLE_WHEN_FULL
+OFF
+PARAMETER_UNKNOWN
+DEF
+ADD_RAM_OUTPUT_REGISTER
+OFF
+PARAMETER_UNKNOWN
+USR
+ALMOST_FULL_VALUE
+0
+PARAMETER_UNKNOWN
+DEF
+ALMOST_EMPTY_VALUE
+0
+PARAMETER_UNKNOWN
+DEF
+USE_EAB
+ON
+PARAMETER_UNKNOWN
+USR
+MAXIMIZE_SPEED
+5
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+OPTIMIZE_FOR_SPEED
+5
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+scfifo_ou31
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+wrreq
+-1
+3
+usedw
+-1
+3
+sclr
+-1
+3
+rdreq
+-1
+3
+q
+-1
+3
+full
+-1
+3
+empty
+-1
+3
+data
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+aglobal110.inc
+f560f9a992734abc3e37886b3957a26a
+a_i2fifo.inc
+bfe272f05af0cf849bd8b4748efceffe
+a_f2fifo.inc
+cebe3836bad826c95e765f77477e8a8b
+a_regfifo.inc
+8b2977668c8752c10a1f1977c9b9ee6
+a_dpfifo.inc
+37c2d0bb70d5a3f83a4aa09e62c75080
+a_fffifo.inc
+aa34dd3c645beefc31a3e4ef186db4
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO
+}
+# macro_sequence
+
+# end
+# entity
+scfifo_ou31
+# storage
+db|pwn_bot.(7).cnf
+db|pwn_bot.(7).cnf
+# case_insensitive
+# source_file
+db|scfifo_ou31.tdf
+64de63c54677c9266fa83ab056c04e
+7
+# used_port {
+wrreq
+-1
+3
+usedw6
+-1
+3
+usedw5
+-1
+3
+usedw4
+-1
+3
+usedw3
+-1
+3
+usedw2
+-1
+3
+usedw1
+-1
+3
+usedw0
+-1
+3
+sclr
+-1
+3
+rdreq
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+full
+-1
+3
+empty
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+a_dpfifo_bm31
+# storage
+db|pwn_bot.(8).cnf
+db|pwn_bot.(8).cnf
+# case_insensitive
+# source_file
+db|a_dpfifo_bm31.tdf
+4b6ea1705f8846e8b0b11b342e2d1d29
+7
+# used_port {
+wreq
+-1
+3
+usedw6
+-1
+3
+usedw5
+-1
+3
+usedw4
+-1
+3
+usedw3
+-1
+3
+usedw2
+-1
+3
+usedw1
+-1
+3
+usedw0
+-1
+3
+sclr
+-1
+3
+rreq
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+full
+-1
+3
+empty
+-1
+3
+data7
+-1
+3
+data6
+-1
+3
+data5
+-1
+3
+data4
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo
+}
+# macro_sequence
+
+# end
+# entity
+altsyncram_1a81
+# storage
+db|pwn_bot.(9).cnf
+db|pwn_bot.(9).cnf
+# case_insensitive
+# source_file
+db|altsyncram_1a81.tdf
+baa595e762bcaaed561e5bd3d0656c76
+7
+# used_port {
+wren_a
+-1
+3
+q_b7
+-1
+3
+q_b6
+-1
+3
+q_b5
+-1
+3
+q_b4
+-1
+3
+q_b3
+-1
+3
+q_b2
+-1
+3
+q_b1
+-1
+3
+q_b0
+-1
+3
+data_a7
+-1
+3
+data_a6
+-1
+3
+data_a5
+-1
+3
+data_a4
+-1
+3
+data_a3
+-1
+3
+data_a2
+-1
+3
+data_a1
+-1
+3
+data_a0
+-1
+3
+clock0
+-1
+3
+address_b6
+-1
+3
+address_b5
+-1
+3
+address_b4
+-1
+3
+address_b3
+-1
+3
+address_b2
+-1
+3
+address_b1
+-1
+3
+address_b0
+-1
+3
+address_a6
+-1
+3
+address_a5
+-1
+3
+address_a4
+-1
+3
+address_a3
+-1
+3
+address_a2
+-1
+3
+address_a1
+-1
+3
+address_a0
+-1
+3
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram
+}
+# macro_sequence
+
+# end
+# entity
+cmpr_2o8
+# storage
+db|pwn_bot.(10).cnf
+db|pwn_bot.(10).cnf
+# case_insensitive
+# source_file
+db|cmpr_2o8.tdf
+e4577ecc403c9d7e3e6c2ee31eb64636
+7
+# used_port {
+datab6
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+aeb
+-1
+3
+dataa6
+-1
+2
+dataa5
+-1
+2
+dataa4
+-1
+2
+dataa3
+-1
+2
+dataa2
+-1
+2
+dataa1
+-1
+2
+dataa0
+-1
+2
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:almost_full_comparer
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:almost_full_comparer
+}
+# macro_sequence
+
+# end
+# entity
+cmpr_2o8
+# storage
+db|pwn_bot.(11).cnf
+db|pwn_bot.(11).cnf
+# case_insensitive
+# source_file
+db|cmpr_2o8.tdf
+e4577ecc403c9d7e3e6c2ee31eb64636
+7
+# used_port {
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+aeb
+-1
+3
+datab6
+-1
+1
+datab5
+-1
+1
+datab4
+-1
+1
+datab3
+-1
+1
+datab2
+-1
+1
+datab1
+-1
+2
+datab0
+-1
+2
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:three_comparison
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:three_comparison
+}
+# macro_sequence
+
+# end
+# entity
+cntr_d5b
+# storage
+db|pwn_bot.(12).cnf
+db|pwn_bot.(12).cnf
+# case_insensitive
+# source_file
+db|cntr_d5b.tdf
+adcee013915f9144d3223fff44d26e6
+7
+# used_port {
+sclr
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb
+}
+# macro_sequence
+
+# end
+# entity
+cntr_q57
+# storage
+db|pwn_bot.(13).cnf
+db|pwn_bot.(13).cnf
+# case_insensitive
+# source_file
+db|cntr_q57.tdf
+f6966583638dce304d7941aa8cae2a7b
+7
+# used_port {
+updown
+-1
+3
+sclr
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter
+}
+# macro_sequence
+
+# end
+# entity
+cntr_e5b
+# storage
+db|pwn_bot.(14).cnf
+db|pwn_bot.(14).cnf
+# case_insensitive
+# source_file
+db|cntr_e5b.tdf
+bfa08051ceaedcee616d958747c10c0
+7
+# used_port {
+sclr
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr
+}
+# macro_sequence
+
+# end
+# entity
+Altera_UP_RS232_Out_Serializer
+# storage
+db|pwn_bot.(15).cnf
+db|pwn_bot.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+altera_up_rs232_out_serializer.v
+f022b0aed12cd4d1e6aa66a1fb7ed8f8
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+BAUD_COUNTER_WIDTH
+9
+PARAMETER_SIGNED_DEC
+USR
+BAUD_TICK_INCREMENT
+000000001
+PARAMETER_UNSIGNED_BIN
+USR
+BAUD_TICK_COUNT
+110110001
+PARAMETER_UNSIGNED_BIN
+USR
+HALF_BAUD_TICK_COUNT
+011011000
+PARAMETER_UNSIGNED_BIN
+USR
+TOTAL_DATA_WIDTH
+11
+PARAMETER_SIGNED_DEC
+USR
+DATA_WIDTH
+8
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer
+}
+# macro_sequence
+
+# end
+# complete
+
