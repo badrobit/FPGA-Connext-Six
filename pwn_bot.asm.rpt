@@ -1,5 +1,5 @@
 Assembler report for pwn_bot
-Sun Mar 18 15:40:22 2012
+Sun Mar 18 16:09:54 2012
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Mar 18 15:40:22 2012 ;
+; Assembler Status      ; Successful - Sun Mar 18 16:09:54 2012 ;
 ; Revision Name         ; pwn_bot                               ;
 ; Top-level Entity Name ; serial_port_test                      ;
 ; Family                ; Cyclone II                            ;
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
-    Info: Processing started: Sun Mar 18 15:40:11 2012
+    Info: Processing started: Sun Mar 18 16:09:43 2012
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off pwn_bot -c pwn_bot
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 280 megabytes
-    Info: Processing ended: Sun Mar 18 15:40:22 2012
+    Info: Peak virtual memory: 277 megabytes
+    Info: Processing ended: Sun Mar 18 16:09:54 2012
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:07
 
