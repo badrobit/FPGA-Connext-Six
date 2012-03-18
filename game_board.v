@@ -28,16 +28,60 @@ task modify_board;
 	end
 endtask
 
-
+// This is responsible for determining where we will play. 
+// Default weighting of the board is 6. If it is greater
+// than 9 we will play defensively. Less than 3 we play 
+// offensively. starts with a win condition check. 
 task play_move;
-	// bunch o shit
-	reg [2:0] moves_left; 
+	reg [3:0] current_weight; 
+	integer moves_left; 
+	integer x; 
+	integer y; 
 	
 	begin
 		while( moves_left > 0 && moves_left <= 2 ) begin
 		// look for WIN condition
+		
+		for( x = 0; x < 19; x = x + 1 ) begin
+			for( y = 0; y < 19; y = y + 1 ) begin
+				
+			end
+		end
+		
 		// look for defensive plays
+		for( x = 0; x < 19; x = x + 1 ) begin
+			for( y = 0; y < 19; y = y + 1 ) begin
+				current_weight = game_board[x][y]; 
+				if( current_weight == 11 ) begin
+					modify_board( x, y, 1 ); 
+					moves_left = moves_left -1; 
+				end
+				else if( current_weight == 10 ) begin
+					modify_board( x, y, 1 ); 
+					moves_left = moves_left -1; 
+				end
+				else begin
+				end
+			end
+		end
+		
 		// look for offsensive moves :) 
+		
+		for( x = 0; x < 19; x = x + 1 ) begin
+			for( y = 0; y < 19; y = y + 1 ) begin
+				current_weight = game_board[x][y]; 
+				if( current_weight == 3 ) begin
+					modify_board( x, y, 1 ); 
+					moves_left = moves_left -1; 
+				end
+				else if( current_weight == 2 ) begin
+					modify_board( x, y, 1 ); 
+					moves_left = moves_left -1; 
+				end
+				else begin
+				end
+			end
+		end
 		
 		//modify_board( x, y, 1 ); 
 		end
