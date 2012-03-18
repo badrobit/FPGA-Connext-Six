@@ -11,49 +11,35 @@ module game_board
 );
 
 // 19x19 array of 4 bit registers. 
-// reg = X | XXX
-//       3   210 
-reg [3:0] game_board [0:18] [0:18];
+// reg = X | XXXX
+//       4   3210 
+reg [4:0] game_board [0:18] [0:18];
 
-reg [0:2] moves_left; 
-
-task place_move; 
+task modify_board; 
 	input [0:5] x; 
 	input [0:5] y; 
-	input [0:4] board_value;
 	input 		player; 
 	
 	begin
-		reg [0:3] temp = board_value; 
-		temp[0][3] = player; 
+		// 0 should be the weight you figure out :) 
+		reg [0:3] temp = 0; 
+		temp[0][4] = player; 
 		game_board[x][y] = temp; 
 	end
 endtask
 
 
-task defensive_move; 
+task play_move;
+	// bunch o shit
+	reg [2:0] moves_left; 
+	
 	begin
-		//while( playing ) begin 
+		while( moves_left > 0 && moves_left <= 2 ) begin
+		// look for WIN condition
+		// look for defensive plays
+		// look for offsensive moves :) 
 		
-		// break condition ... don't need to defend ... 
-		
-		//end 
-
-	end
-endtask 
-
-
-task offensive_move;
-	input [3:0]	moves_left; 
-
-	reg [0:5] x_move; 
-	reg [0:5] y_move; 
-		
-	begin
-		
-		while( moves_left > 0 ) begin
-		
-			place_move( x_move, y_move, 0, 1 ); 
+		//modify_board( x, y, 1 ); 
 		end
 	end
 endtask
@@ -63,11 +49,11 @@ always @( compute_move ) begin
 
 	
 	if( !compute_move )begin			// PLACE OPPONENT MOVE
-		place_move( x_1, y_1, 0, 0 ); 
-		place_move( x_2, y_2, 0, 0 ); 
+		modify_board( x_1, y_1, 0 ); 
+		modify_board( x_2, y_2, 0 ); 
 	end
 	else if( compute_move ) begin		// COMPUTE OUR MOVE ... PLACE OUR MOVE
-		defensive_move(); 
+		play_move(); 
 	end
 	else begin									// SHIT GOT WEIRD 
 	end
