@@ -1,13 +1,13 @@
 module game_board
 (
-	input [0:5] x_1; 
-	input [0:5] y_1; 
-	input [0:5] x_2;
-	input [0:5] y_2;
-	input 		compute_move; 
+	input [0:5] x_1,
+	input [0:5] y_1, 
+	input [0:5] x_2,
+	input [0:5] y_2,
+	input 		compute_move,
 	
-	output [0:5]	x_out; 
-	output [0:5] 	y_out; 
+	output [0:5]	x_out,
+	output [0:5] 	y_out 
 );
 
 // 19x19 array of 4 bit registers. 
@@ -30,13 +30,34 @@ task place_move;
 	end
 endtask
 
+
 task defensive_move; 
+	begin
+		//while( playing ) begin 
+		
+		// break condition ... don't need to defend ... 
+		
+		//end 
 
-end task; 
+	end
+endtask 
 
-task offesive_move;
 
-end task; 
+task offensive_move;
+	input [3:0]	moves_left; 
+
+	reg [0:5] x_move; 
+	reg [0:5] y_move; 
+		
+	begin
+		
+		while( moves_left > 0 ) begin
+		
+			place_move( x_move, y_move, 0, 1 ); 
+		end
+	end
+endtask
+
 
 always @( compute_move ) begin
 
@@ -46,10 +67,9 @@ always @( compute_move ) begin
 		place_move( x_2, y_2, 0, 0 ); 
 	end
 	else if( compute_move ) begin		// COMPUTE OUR MOVE ... PLACE OUR MOVE
-		
+		defensive_move(); 
 	end
-	else										// SHIT GOT WEIRD 
-		
+	else begin									// SHIT GOT WEIRD 
 	end
 end
 
