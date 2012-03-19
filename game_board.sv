@@ -11,17 +11,28 @@ module game_board
 );
 
 // 19x19 array of 4 bit registers. 
-// reg = X | XXXX
-//       4   3210 
+// reg =     XX | XXXX
+//           54   3210 
+//      (Player) (Board Weight)
+// ---------------------------------
+// Players = 	0 - Not Played
+//					1 - Us
+//					2 - Them
 reg [4:0] game_board [0:18] [0:18];
 
+// This will be called only on the first initilization of the gameboard. 
+// It will initilize all of the player indicators to 0 and all of the 
+// gameboard weights to a default value of 6. 
 initial begin
 	integer x; 
 	integer y; 
 	
 	for( x = 0; x < 19; x = x + 1 ) begin
 		for( y = 0; y < 19; y = y + 1 ) begin
-			game_board[x][y] = 6; 
+			reg [0:5] temp = game_board[x][y]; 
+			temp[0:3] = 6; 
+			temp[4:5] = 0; 
+			game_board[x][y] = temp; 
 		end
 	end
 end
@@ -65,66 +76,130 @@ task play_move;
 					// look up
 					while( steps < 6 && y+steps > 0 && y+steps < 19 ) begin
 						reg [0:5] temp = game_board[x][y+steps]; 
-						if( temp[0][3:4] == 1 ) begin 
+						if( temp[0][4:5] == 1 ) begin 
 							count_up++; 									
 						end
 						steps++; 
 					end
+					if( count_up > 3 ) begin
+						for( int z = 0; z < 6; z++ ) begin
+							reg [0:5] temp = game_board[x][y+z]; 
+							if( temp[0][4:5] == 0 ) begin 
+								modify_board( x, y+z, 1 );									
+							end
+						end
+					end
 					// look up && Right
 					while( steps < 6 && y+steps > 0 && y+steps < 19 && x+steps > 0 && x+steps < 19) begin
 						reg [0:5] temp = game_board[x+steps][y+steps]; 
-						if( temp[0][3:4] == 1 ) begin 
+						if( temp[0][4:5] == 1 ) begin 
 							count_up_right++; 									
 						end
 						steps++; 
+					end
+					if( count_up_right > 3 ) begin
+						for( int z = 0; z < 6; z++ ) begin
+							reg [0:5] temp = game_board[x+z][y+z]; 
+							if( temp[0][4:5] == 0 ) begin 
+								modify_board( x+z, y+z, 1 );									
+							end
+						end
 					end
 					// look RIGHT
 					while( steps < 6 && x+steps > 0 && x+steps < 19 ) begin
 						reg [0:5] temp = game_board[x+steps][y]; 
-						if( temp[0][3:4] == 1 ) begin 
+						if( temp[0][4:5] == 1 ) begin 
 							count_right++; 									
 						end
 						steps++; 
 					end
+					if( count_right > 3 ) begin
+						for( int z = 0; z < 6; z++ ) begin
+							reg [0:5] temp = game_board[x+z][y]; 
+							if( temp[0][4:5] == 0 ) begin 
+								modify_board( x+z, y, 1 );									
+							end
+						end
+					end
 					// look Down && Right
 					while( steps < 6 && y-steps > 0 && y-steps < 19 && x+steps > 0 && x+steps < 19) begin
 						reg [0:5] temp = game_board[x+steps][y-steps]; 
-						if( temp[0][3:4] == 1 ) begin 
+						if( temp[0][4:5] == 1 ) begin 
 							count_down_right++; 									
 						end
 						steps++; 
 					end
+					if( count_down_right > 3 ) begin
+						for( int z = 0; z < 6; z++ ) begin
+							reg [0:5] temp = game_board[x-z][y+z]; 
+							if( temp[0][4:5] == 0 ) begin 
+								modify_board( x-z, y+z, 1 );									
+							end
+						end
+					end
 					// Look DOWN
 					while( steps < 6 && y-steps > 0 && y-steps < 19 ) begin
 						reg [0:5] temp = game_board[x][y-steps]; 
-						if( temp[0][3:4] == 1 ) begin 
+						if( temp[0][4:5] == 1 ) begin 
 							count_down++; 									
 						end
 						steps++; 
 					end
+					if( count_down > 3 ) begin
+						for( int z = 0; z < 6; z++ ) begin
+							reg [0:5] temp = game_board[x-z][y]; 
+							if( temp[0][4:5] == 0 ) begin 
+								modify_board( x-z, y, 1 );									
+							end
+						end
+					end
 					// look Down && LEFT
 					while( steps < 6 && y-steps > 0 && y-steps < 19 && x-steps > 0 && x-steps < 19) begin
 						reg [0:5] temp = game_board[x-steps][y-steps]; 
-						if( temp[0][3:4] == 1 ) begin 
+						if( temp[0][4:5] == 1 ) begin 
 							count_down_left++; 									
 						end
 						steps++; 
 					end
+					if( count_down_left > 3 ) begin
+						for( int z = 0; z < 6; z++ ) begin
+							reg [0:5] temp = game_board[x-z][y-z]; 
+							if( temp[0][4:5] == 0 ) begin 
+								modify_board( x-z, y-z, 1 );									
+							end
+						end
+					end
 					// look LEFT
 					while( steps < 6 && x-steps > 0 && x-steps < 19 ) begin
 						reg [0:5] temp = game_board[x-steps][y]; 
-						if( temp[0][3:4] == 1 ) begin 
+						if( temp[0][4:5] == 1 ) begin 
 							count_left++; 									
 						end
 						steps++; 
 					end
+					if( count_left > 3 ) begin
+						for( int z = 0; z < 6; z++ ) begin
+							reg [0:5] temp = game_board[x-z][y]; 
+							if( temp[0][4:5] == 0 ) begin 
+								modify_board( x-z, y, 1 );									
+							end
+						end
+					end
 					// look up && left
 					while( steps < 6 && y+steps > 0 && y+steps < 19 && x-steps > 0 && x-steps < 19) begin
 						reg [0:5] temp = game_board[x-steps][y+steps]; 
-						if( temp[0][3:4] == 1 ) begin 
+						if( temp[0][4:5] == 1 ) begin 
 							count_up_right++; 									
 						end
 						steps++; 
+					end
+					if( count_up_left > 3 ) begin
+						for( int z = 0; z < 6; z++ ) begin
+							reg [0:5] temp = game_board[x-z][y+z]; 
+							if( temp[0][4:5] == 0 ) begin 
+								modify_board( x-z, y+z, 1 );									
+							end
+						end
 					end
 				end
 			end

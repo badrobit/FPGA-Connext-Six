@@ -1,5 +1,5 @@
 Flow report for pwn_bot
-Sun Mar 18 23:32:02 2012
+Mon Mar 19 10:18:31 2012
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 18 23:32:02 2012          ;
+; Flow Status                        ; Successful - Mon Mar 19 10:18:31 2012          ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Full Version ;
 ; Revision Name                      ; pwn_bot                                        ;
 ; Top-level Entity Name              ; serial_port_test                               ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/18/2012 23:31:34 ;
+; Start date & time ; 03/19/2012 10:18:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pwn_bot             ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+------------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name      ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 130188365765.133212429401964          ; --            ; --               ; --         ;
+; COMPILER_SIGNATURE_ID               ; 130188365765.133216308102820          ; --            ; --               ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --               ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --               ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; serial_port_test ; Top        ;
@@ -93,8 +93,8 @@ applicable agreement for further details.
 ; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 251 MB              ; 00:00:07                           ;
 ; Fitter                    ; 00:00:12     ; 1.3                     ; 355 MB              ; 00:00:12                           ;
 ; TimeQuest Timing Analyzer ; 00:00:11     ; 1.0                     ; 243 MB              ; 00:00:06                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 280 MB              ; 00:00:07                           ;
-; Total                     ; 00:00:42     ; --                      ; --                  ; 00:00:32                           ;
+; Assembler                 ; 00:00:12     ; 1.0                     ; 276 MB              ; 00:00:07                           ;
+; Total                     ; 00:00:43     ; --                      ; --                  ; 00:00:32                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
