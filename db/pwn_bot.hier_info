@@ -1,4 +1,4 @@
-|serial_port_test
+|pwn_bot
 CLOCK_50 => CLOCK_50.IN2
 KEY[0] => KEY[0].IN1
 KEY[1] => ~NO_FANOUT~
@@ -7,7 +7,7 @@ KEY[3] => ~NO_FANOUT~
 UART_RXD => UART_RXD.IN1
 
 
-|serial_port_test|key_controller:comb_3
+|pwn_bot|key_controller:comb_3
 KEY => key_pressed.IN1
 KEY => key_released.IN1
 KEY => hold_timer.OUTPUTSELECT
@@ -112,7 +112,14 @@ clock => hold_timer[31].CLK
 clock => key_prev.CLK
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6
+|pwn_bot|hex_display:dsp0
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+
+
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6
 clk => clk.IN2
 reset => reset.IN2
 address => always2.IN1
@@ -215,7 +222,7 @@ writedata[31] => ~NO_FANOUT~
 UART_RXD => UART_RXD.IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer
 clk => clk.IN2
 reset => reset.IN2
 serial_data_in => data_in_shift_reg.DATAB
@@ -223,7 +230,7 @@ serial_data_in => receiving_data.OUTPUTSELECT
 receive_data_en => comb.IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters
 clk => all_bits_transmitted~reg0.CLK
 clk => bit_counter[0].CLK
 clk => bit_counter[1].CLK
@@ -271,7 +278,7 @@ reset_counters => bit_counter.OUTPUTSELECT
 reset_counters => bit_counter.OUTPUTSELECT
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO
 clk => clk.IN1
 reset => reset.IN1
 write_en => write_en.IN1
@@ -286,7 +293,7 @@ write_data[8] => write_data[8].IN1
 read_en => read_en.IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO
 data[0] => scfifo_ou31:auto_generated.data[0]
 data[1] => scfifo_ou31:auto_generated.data[1]
 data[2] => scfifo_ou31:auto_generated.data[2]
@@ -302,7 +309,7 @@ aclr => ~NO_FANOUT~
 sclr => scfifo_ou31:auto_generated.sclr
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated
 clock => a_dpfifo_bm31:dpfifo.clock
 data[0] => a_dpfifo_bm31:dpfifo.data[0]
 data[1] => a_dpfifo_bm31:dpfifo.data[1]
@@ -317,7 +324,7 @@ sclr => a_dpfifo_bm31:dpfifo.sclr
 wrreq => a_dpfifo_bm31:dpfifo.wreq
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo
 clock => altsyncram_1a81:FIFOram.clock0
 clock => cntr_d5b:rd_ptr_msb.clock
 clock => cntr_q57:usedw_counter.clock
@@ -405,7 +412,7 @@ wreq => _.IN0
 wreq => wait_state.IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -544,7 +551,7 @@ wren_a => ram_block1a6.PORTAWE
 wren_a => ram_block1a7.PORTAWE
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:almost_full_comparer
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:almost_full_comparer
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
 dataa[2] => data_wire[1].IN0
@@ -561,7 +568,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:three_comparison
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:three_comparison
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
 dataa[2] => data_wire[1].IN0
@@ -578,7 +585,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb
 clock => counter_reg_bit2a[5].CLK
 clock => counter_reg_bit2a[4].CLK
 clock => counter_reg_bit2a[3].CLK
@@ -591,7 +598,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter
 clock => counter_reg_bit3a[6].CLK
 clock => counter_reg_bit3a[5].CLK
 clock => counter_reg_bit3a[4].CLK
@@ -612,7 +619,7 @@ updown => counter_comb_bita5.DATAB
 updown => counter_comb_bita6.DATAB
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr
 clock => counter_reg_bit4a[6].CLK
 clock => counter_reg_bit4a[5].CLK
 clock => counter_reg_bit4a[4].CLK
@@ -626,7 +633,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer
 clk => clk.IN2
 reset => reset.IN2
 transmit_data[1] => transmit_data[1].IN1
@@ -640,7 +647,7 @@ transmit_data[8] => transmit_data[8].IN1
 transmit_data_en => comb.IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters
 clk => all_bits_transmitted~reg0.CLK
 clk => bit_counter[0].CLK
 clk => bit_counter[1].CLK
@@ -688,7 +695,7 @@ reset_counters => bit_counter.OUTPUTSELECT
 reset_counters => bit_counter.OUTPUTSELECT
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO
 clk => clk.IN1
 reset => reset.IN1
 write_en => write_en.IN1
@@ -703,7 +710,7 @@ write_data[8] => write_data[8].IN1
 read_en => read_en.IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO
 data[0] => scfifo_ou31:auto_generated.data[0]
 data[1] => scfifo_ou31:auto_generated.data[1]
 data[2] => scfifo_ou31:auto_generated.data[2]
@@ -719,7 +726,7 @@ aclr => ~NO_FANOUT~
 sclr => scfifo_ou31:auto_generated.sclr
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated
 clock => a_dpfifo_bm31:dpfifo.clock
 data[0] => a_dpfifo_bm31:dpfifo.data[0]
 data[1] => a_dpfifo_bm31:dpfifo.data[1]
@@ -734,7 +741,7 @@ sclr => a_dpfifo_bm31:dpfifo.sclr
 wrreq => a_dpfifo_bm31:dpfifo.wreq
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo
 clock => altsyncram_1a81:FIFOram.clock0
 clock => cntr_d5b:rd_ptr_msb.clock
 clock => cntr_q57:usedw_counter.clock
@@ -822,7 +829,7 @@ wreq => _.IN0
 wreq => wait_state.IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -961,7 +968,7 @@ wren_a => ram_block1a6.PORTAWE
 wren_a => ram_block1a7.PORTAWE
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:almost_full_comparer
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:almost_full_comparer
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
 dataa[2] => data_wire[1].IN0
@@ -978,7 +985,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:three_comparison
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cmpr_2o8:three_comparison
 dataa[0] => data_wire[0].IN0
 dataa[1] => data_wire[0].IN0
 dataa[2] => data_wire[1].IN0
@@ -995,7 +1002,7 @@ datab[5] => data_wire[2].IN1
 datab[6] => data_wire[3].IN1
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb
 clock => counter_reg_bit2a[5].CLK
 clock => counter_reg_bit2a[4].CLK
 clock => counter_reg_bit2a[3].CLK
@@ -1008,7 +1015,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter
 clock => counter_reg_bit3a[6].CLK
 clock => counter_reg_bit3a[5].CLK
 clock => counter_reg_bit3a[4].CLK
@@ -1029,7 +1036,7 @@ updown => counter_comb_bita5.DATAB
 updown => counter_comb_bita6.DATAB
 
 
-|serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr
+|pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr
 clock => counter_reg_bit4a[6].CLK
 clock => counter_reg_bit4a[5].CLK
 clock => counter_reg_bit4a[4].CLK

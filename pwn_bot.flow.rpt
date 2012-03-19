@@ -1,5 +1,5 @@
 Flow report for pwn_bot
-Sun Mar 18 16:09:54 2012
+Sun Mar 18 23:23:27 2012
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
 
 
@@ -38,18 +38,18 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 18 16:09:54 2012          ;
+; Flow Status                        ; Successful - Sun Mar 18 23:23:27 2012          ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Full Version ;
 ; Revision Name                      ; pwn_bot                                        ;
-; Top-level Entity Name              ; serial_port_test                               ;
+; Top-level Entity Name              ; pwn_bot                                        ;
 ; Family                             ; Cyclone II                                     ;
 ; Device                             ; EP2C35F672C6                                   ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 311 / 33,216 ( < 1 % )                         ;
-;     Total combinational functions  ; 311 / 33,216 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 219 / 33,216 ( < 1 % )                         ;
-; Total registers                    ; 219                                            ;
-; Total pins                         ; 7 / 475 ( 1 % )                                ;
+; Total logic elements               ; 320 / 33,216 ( < 1 % )                         ;
+;     Total combinational functions  ; 320 / 33,216 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 223 / 33,216 ( < 1 % )                         ;
+; Total registers                    ; 223                                            ;
+; Total pins                         ; 14 / 475 ( 3 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 2,048 / 483,840 ( < 1 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                 ;
@@ -62,27 +62,26 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/18/2012 16:09:25 ;
+; Start date & time ; 03/18/2012 23:22:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pwn_bot             ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                            ;
-+-------------------------------------+---------------------------------------+---------------+------------------+------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name      ; Section Id ;
-+-------------------------------------+---------------------------------------+---------------+------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 130188365765.133209776504840          ; --            ; --               ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --               ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --               ; --         ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; serial_port_test ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; serial_port_test ; Top        ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; serial_port_test ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --               ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --               ; --         ;
-; TOP_LEVEL_ENTITY                    ; serial_port_test                      ; pwn_bot       ; --               ; --         ;
-+-------------------------------------+---------------------------------------+---------------+------------------+------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                       ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 130188365403.133212377704660          ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --         ;
++-------------------------------------+---------------------------------------+---------------+-------------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -90,11 +89,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 250 MB              ; 00:00:07                           ;
-; Fitter                    ; 00:00:12     ; 1.4                     ; 355 MB              ; 00:00:12                           ;
-; TimeQuest Timing Analyzer ; 00:00:11     ; 1.0                     ; 243 MB              ; 00:00:06                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 277 MB              ; 00:00:07                           ;
-; Total                     ; 00:00:42     ; --                      ; --                  ; 00:00:32                           ;
+; Analysis & Synthesis      ; 00:00:08     ; 1.0                     ; 251 MB              ; 00:00:07                           ;
+; Fitter                    ; 00:00:12     ; 1.2                     ; 355 MB              ; 00:00:13                           ;
+; TimeQuest Timing Analyzer ; 00:00:11     ; 1.0                     ; 244 MB              ; 00:00:06                           ;
+; Assembler                 ; 00:00:11     ; 1.0                     ; 281 MB              ; 00:00:07                           ;
+; Total                     ; 00:00:42     ; --                      ; --                  ; 00:00:33                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -103,10 +102,10 @@ applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; gc127m02         ; Windows XP ; 5.1        ; i686           ;
-; Fitter                    ; gc127m02         ; Windows XP ; 5.1        ; i686           ;
-; TimeQuest Timing Analyzer ; gc127m02         ; Windows XP ; 5.1        ; i686           ;
-; Assembler                 ; gc127m02         ; Windows XP ; 5.1        ; i686           ;
+; Analysis & Synthesis      ; gc127m03         ; Windows XP ; 5.1        ; i686           ;
+; Fitter                    ; gc127m03         ; Windows XP ; 5.1        ; i686           ;
+; TimeQuest Timing Analyzer ; gc127m03         ; Windows XP ; 5.1        ; i686           ;
+; Assembler                 ; gc127m03         ; Windows XP ; 5.1        ; i686           ;
 +---------------------------+------------------+------------+------------+----------------+
 
 

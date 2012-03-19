@@ -5,11 +5,13 @@
 	Echo module: Example of how to use the DE2 serial port. Echos any bytes received back to the 
 	sender. 
 */
+
 module serial_port_test (
 	input CLOCK_50, 
 	input [3:0] KEY,
 	input UART_RXD, 
-	output UART_TXD	
+	output UART_TXD
+		
 );	
 	wire [3:0] key_pressed, key_released; 
 	key_controller(KEY[0], CLOCK_50, key_pressed[0], key_released[0]);

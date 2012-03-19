@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pwn_bot
-Sun Mar 18 16:09:28 2012
+Sun Mar 18 23:23:01 2012
 Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
 
 
@@ -34,9 +34,11 @@ Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
  26. Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO"
  27. Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters"
  28. Port Connectivity Checks: "Altera_UP_Avalon_RS232:comb_6"
- 29. Port Connectivity Checks: "key_controller:comb_3"
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+ 29. Port Connectivity Checks: "hex_display:dsp0"
+ 30. Port Connectivity Checks: "key_controller:comb_3"
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -62,16 +64,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 18 16:09:28 2012          ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 18 23:23:01 2012          ;
 ; Quartus II Version                 ; 11.0 Build 208 07/03/2011 SP 1 SJ Full Version ;
 ; Revision Name                      ; pwn_bot                                        ;
-; Top-level Entity Name              ; serial_port_test                               ;
+; Top-level Entity Name              ; pwn_bot                                        ;
 ; Family                             ; Cyclone II                                     ;
-; Total logic elements               ; 312                                            ;
-;     Total combinational functions  ; 311                                            ;
-;     Dedicated logic registers      ; 219                                            ;
-; Total registers                    ; 219                                            ;
-; Total pins                         ; 7                                              ;
+; Total logic elements               ; 325                                            ;
+;     Total combinational functions  ; 320                                            ;
+;     Dedicated logic registers      ; 223                                            ;
+; Total registers                    ; 223                                            ;
+; Total pins                         ; 14                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 2,048                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -85,7 +87,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; serial_port_test   ; pwn_bot            ;
+; Top-level entity name                                                      ; pwn_bot            ; pwn_bot            ;
 ; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -183,13 +185,14 @@ applicable agreement for further details.
 +-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path  ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                    ;
 +-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+
-; key_controller.v                  ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/key_controller.v                  ;
-; serial_port_test.v                ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/serial_port_test.v                ;
-; Altera_UP_SYNC_FIFO.v             ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/Altera_UP_SYNC_FIFO.v             ;
-; Altera_UP_RS232_Out_Serializer.v  ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/Altera_UP_RS232_Out_Serializer.v  ;
-; Altera_UP_RS232_In_Deserializer.v ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/Altera_UP_RS232_In_Deserializer.v ;
-; Altera_UP_RS232_Counters.v        ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/Altera_UP_RS232_Counters.v        ;
-; Altera_UP_Avalon_RS232.v          ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/Altera_UP_Avalon_RS232.v          ;
+; hex_display.v                     ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/hex_display.v                     ;
+; key_controller.v                  ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/key_controller.v                  ;
+; Altera_UP_SYNC_FIFO.v             ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/Altera_UP_SYNC_FIFO.v             ;
+; Altera_UP_RS232_Out_Serializer.v  ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/Altera_UP_RS232_Out_Serializer.v  ;
+; Altera_UP_RS232_In_Deserializer.v ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/Altera_UP_RS232_In_Deserializer.v ;
+; Altera_UP_RS232_Counters.v        ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/Altera_UP_RS232_Counters.v        ;
+; Altera_UP_Avalon_RS232.v          ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/Altera_UP_Avalon_RS232.v          ;
+; pwn_bot.v                         ; yes             ; User Verilog HDL File        ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/pwn_bot.v                         ;
 ; scfifo.tdf                        ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/scfifo.tdf                                                    ;
 ; a_regfifo.inc                     ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_regfifo.inc                                                 ;
 ; a_dpfifo.inc                      ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_dpfifo.inc                                                  ;
@@ -197,13 +200,13 @@ applicable agreement for further details.
 ; a_fffifo.inc                      ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_fffifo.inc                                                  ;
 ; a_f2fifo.inc                      ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/a_f2fifo.inc                                                  ;
 ; aglobal110.inc                    ; yes             ; Megafunction                 ; c:/altera/11.0sp1/quartus/libraries/megafunctions/aglobal110.inc                                                ;
-; db/scfifo_ou31.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/db/scfifo_ou31.tdf                ;
-; db/a_dpfifo_bm31.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/db/a_dpfifo_bm31.tdf              ;
-; db/altsyncram_1a81.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/db/altsyncram_1a81.tdf            ;
-; db/cmpr_2o8.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/db/cmpr_2o8.tdf                   ;
-; db/cntr_d5b.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/db/cntr_d5b.tdf                   ;
-; db/cntr_q57.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/db/cntr_q57.tdf                   ;
-; db/cntr_e5b.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-bcc4838/db/cntr_e5b.tdf                   ;
+; db/scfifo_ou31.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/db/scfifo_ou31.tdf                ;
+; db/a_dpfifo_bm31.tdf              ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/db/a_dpfifo_bm31.tdf              ;
+; db/altsyncram_1a81.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/db/altsyncram_1a81.tdf            ;
+; db/cmpr_2o8.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/db/cmpr_2o8.tdf                   ;
+; db/cntr_d5b.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/db/cntr_d5b.tdf                   ;
+; db/cntr_q57.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/db/cntr_q57.tdf                   ;
+; db/cntr_e5b.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/db/cntr_e5b.tdf                   ;
 +-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 
@@ -212,60 +215,61 @@ applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 312      ;
+; Estimated Total logic elements              ; 325      ;
 ;                                             ;          ;
-; Total combinational functions               ; 311      ;
+; Total combinational functions               ; 320      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 98       ;
+;     -- 4 input functions                    ; 106      ;
 ;     -- 3 input functions                    ; 50       ;
-;     -- <=2 input functions                  ; 163      ;
+;     -- <=2 input functions                  ; 164      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 193      ;
+;     -- normal mode                          ; 202      ;
 ;     -- arithmetic mode                      ; 118      ;
 ;                                             ;          ;
-; Total registers                             ; 219      ;
-;     -- Dedicated logic registers            ; 219      ;
+; Total registers                             ; 223      ;
+;     -- Dedicated logic registers            ; 223      ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
-; I/O pins                                    ; 7        ;
+; I/O pins                                    ; 14       ;
 ; Total memory bits                           ; 2048     ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 235      ;
-; Total fan-out                               ; 1811     ;
-; Average fan-out                             ; 3.27     ;
+; Maximum fan-out                             ; 239      ;
+; Total fan-out                               ; 1866     ;
+; Average fan-out                             ; 3.26     ;
 +---------------------------------------------+----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                         ;
-+---------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                              ; Library Name ;
-+---------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |serial_port_test                                             ; 311 (10)          ; 219 (5)      ; 2048        ; 0            ; 0       ; 0         ; 7    ; 0            ; |serial_port_test                                                                                                                                                                                                                ;              ;
-;    |Altera_UP_Avalon_RS232:comb_6|                            ; 206 (24)          ; 149 (24)     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6                                                                                                                                                                                  ;              ;
-;       |Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer| ; 95 (21)           ; 66 (18)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer                                                                                                                            ;              ;
-;          |Altera_UP_RS232_Counters:RS232_In_Counters|         ; 22 (22)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters                                                                                 ;              ;
-;          |Altera_UP_SYNC_FIFO:RS232_In_FIFO|                  ; 52 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO                                                                                          ;              ;
-;             |scfifo:Sync_FIFO|                                ; 52 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO                                                                         ;              ;
-;                |scfifo_ou31:auto_generated|                   ; 52 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated                                              ;              ;
-;                   |a_dpfifo_bm31:dpfifo|                      ; 52 (29)           ; 33 (13)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo                         ;              ;
-;                      |altsyncram_1a81:FIFOram|                ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram ;              ;
-;                      |cntr_d5b:rd_ptr_msb|                    ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb     ;              ;
-;                      |cntr_e5b:wr_ptr|                        ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr         ;              ;
-;                      |cntr_q57:usedw_counter|                 ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter  ;              ;
-;       |Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|   ; 87 (15)           ; 59 (11)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer                                                                                                                              ;              ;
-;          |Altera_UP_RS232_Counters:RS232_Out_Counters|        ; 21 (21)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters                                                                                  ;              ;
-;          |Altera_UP_SYNC_FIFO:RS232_Out_FIFO|                 ; 51 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO                                                                                           ;              ;
-;             |scfifo:Sync_FIFO|                                ; 51 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO                                                                          ;              ;
-;                |scfifo_ou31:auto_generated|                   ; 51 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated                                               ;              ;
-;                   |a_dpfifo_bm31:dpfifo|                      ; 51 (28)           ; 33 (13)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo                          ;              ;
-;                      |altsyncram_1a81:FIFOram|                ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram  ;              ;
-;                      |cntr_d5b:rd_ptr_msb|                    ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb      ;              ;
-;                      |cntr_e5b:wr_ptr|                        ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr          ;              ;
-;                      |cntr_q57:usedw_counter|                 ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter   ;              ;
-;    |key_controller:comb_3|                                    ; 95 (95)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |serial_port_test|key_controller:comb_3                                                                                                                                                                                          ;              ;
-+---------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                ;
++---------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                     ; Library Name ;
++---------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |pwn_bot                                                      ; 320 (11)          ; 223 (9)      ; 2048        ; 0            ; 0       ; 0         ; 14   ; 0            ; |pwn_bot                                                                                                                                                                                                                ;              ;
+;    |Altera_UP_Avalon_RS232:comb_6|                            ; 206 (24)          ; 149 (24)     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6                                                                                                                                                                                  ;              ;
+;       |Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer| ; 95 (21)           ; 66 (18)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer                                                                                                                            ;              ;
+;          |Altera_UP_RS232_Counters:RS232_In_Counters|         ; 22 (22)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters                                                                                 ;              ;
+;          |Altera_UP_SYNC_FIFO:RS232_In_FIFO|                  ; 52 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO                                                                                          ;              ;
+;             |scfifo:Sync_FIFO|                                ; 52 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO                                                                         ;              ;
+;                |scfifo_ou31:auto_generated|                   ; 52 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated                                              ;              ;
+;                   |a_dpfifo_bm31:dpfifo|                      ; 52 (29)           ; 33 (13)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo                         ;              ;
+;                      |altsyncram_1a81:FIFOram|                ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram ;              ;
+;                      |cntr_d5b:rd_ptr_msb|                    ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb     ;              ;
+;                      |cntr_e5b:wr_ptr|                        ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr         ;              ;
+;                      |cntr_q57:usedw_counter|                 ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter  ;              ;
+;       |Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|   ; 87 (15)           ; 59 (11)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer                                                                                                                              ;              ;
+;          |Altera_UP_RS232_Counters:RS232_Out_Counters|        ; 21 (21)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters                                                                                  ;              ;
+;          |Altera_UP_SYNC_FIFO:RS232_Out_FIFO|                 ; 51 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO                                                                                           ;              ;
+;             |scfifo:Sync_FIFO|                                ; 51 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO                                                                          ;              ;
+;                |scfifo_ou31:auto_generated|                   ; 51 (0)            ; 33 (0)       ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated                                               ;              ;
+;                   |a_dpfifo_bm31:dpfifo|                      ; 51 (28)           ; 33 (13)      ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo                          ;              ;
+;                      |altsyncram_1a81:FIFOram|                ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|altsyncram_1a81:FIFOram  ;              ;
+;                      |cntr_d5b:rd_ptr_msb|                    ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_d5b:rd_ptr_msb      ;              ;
+;                      |cntr_e5b:wr_ptr|                        ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr          ;              ;
+;                      |cntr_q57:usedw_counter|                 ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_SYNC_FIFO:RS232_Out_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_q57:usedw_counter   ;              ;
+;    |hex_display:dsp0|                                         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|hex_display:dsp0                                                                                                                                                                                               ;              ;
+;    |key_controller:comb_3|                                    ; 96 (96)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |pwn_bot|key_controller:comb_3                                                                                                                                                                                          ;              ;
++---------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -297,30 +301,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 219   ;
+; Total registers                              ; 223   ;
 ; Number of registers using Synchronous Clear  ; 98    ;
 ; Number of registers using Synchronous Load   ; 49    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 59    ;
+; Number of registers using Clock Enable       ; 65    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                                                                                                                       ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|data_in_shift_reg[2]                                       ;                            ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|data_out_shift_reg[1]                                        ;                            ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters|baud_counter[1]  ;                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters|bit_counter[0]   ;                            ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|data_to_uart[4]                                                                                                  ;                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters|bit_counter[1]  ;                            ;
-; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; |serial_port_test|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters|baud_counter[0] ;                            ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; |serial_port_test|wait_state[2]                                                                                                                                  ;                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                                                                                                                                              ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|data_in_shift_reg[9]                                       ;                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|data_to_uart[4]                                                                                                  ;                            ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|data_out_shift_reg[6]                                        ;                            ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters|baud_counter[0]  ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|Altera_UP_RS232_Counters:RS232_Out_Counters|bit_counter[0]   ;                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters|bit_counter[3]  ;                            ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; |pwn_bot|Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_RS232_Counters:RS232_In_Counters|baud_counter[3] ;                            ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; |pwn_bot|wait_state[2]                                                                                                                                  ;                            ;
++--------------------+-----------+---------------+----------------------+------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -571,6 +575,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hex_display:dsp0"                                                                                                                                                                    ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hex_digit ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "key_controller:comb_3"                                                                      ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -595,15 +608,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
-    Info: Processing started: Sun Mar 18 16:09:20 2012
+    Info: Processing started: Sun Mar 18 23:22:52 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwn_bot -c pwn_bot
 Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Found 1 design units, including 1 entities, in source file hex_7seg.v
+    Info: Found entity 1: hex_7seg
+Info: Found 1 design units, including 1 entities, in source file hex_display.v
+    Info: Found entity 1: hex_display
 Info: Found 1 design units, including 1 entities, in source file controller.v
     Info: Found entity 1: controller
 Info: Found 1 design units, including 1 entities, in source file key_controller.v
     Info: Found entity 1: key_controller
-Info: Found 1 design units, including 1 entities, in source file serial_port_test.v
-    Info: Found entity 1: serial_port_test
 Info: Found 1 design units, including 1 entities, in source file altera_up_sync_fifo.v
     Info: Found entity 1: Altera_UP_SYNC_FIFO
 Info: Found 1 design units, including 1 entities, in source file altera_up_rs232_out_serializer.v
@@ -616,16 +631,17 @@ Info: Found 1 design units, including 1 entities, in source file altera_up_avalo
     Info: Found entity 1: Altera_UP_Avalon_RS232
 Info: Found 1 design units, including 1 entities, in source file modify_clock.v
     Info: Found entity 1: modify_clock
-Info: Found 1 design units, including 1 entities, in source file game_board.v
-    Info: Found entity 1: game_board
+Info: Found 1 design units, including 1 entities, in source file pwn_bot.v
+    Info: Found entity 1: pwn_bot
 Warning (10236): Verilog HDL Implicit Net warning at key_controller.v(31): created implicit net for "key_held"
 Warning (10236): Verilog HDL Implicit Net warning at key_controller.v(33): created implicit net for "key_repeat"
-Warning (10236): Verilog HDL Implicit Net warning at serial_port_test.v(26): created implicit net for "serial_read_available"
-Critical Warning (10846): Verilog HDL Instantiation warning at serial_port_test.v(15): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at serial_port_test.v(40): instance has no name
-Info: Elaborating entity "serial_port_test" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at serial_port_test.v(57): truncated value with size 32 to match size of target (3)
+Warning (10236): Verilog HDL Implicit Net warning at pwn_bot.v(28): created implicit net for "serial_read_available"
+Critical Warning (10846): Verilog HDL Instantiation warning at pwn_bot.v(17): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at pwn_bot.v(44): instance has no name
+Info: Elaborating entity "pwn_bot" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at pwn_bot.v(61): truncated value with size 32 to match size of target (3)
 Info: Elaborating entity "key_controller" for hierarchy "key_controller:comb_3"
+Info: Elaborating entity "hex_display" for hierarchy "hex_display:dsp0"
 Info: Elaborating entity "Altera_UP_Avalon_RS232" for hierarchy "Altera_UP_Avalon_RS232:comb_6"
 Warning (10036): Verilog HDL or VHDL warning at Altera_UP_Avalon_RS232.v(79): object "write_data_parity" assigned a value but never read
 Info: Elaborating entity "Altera_UP_RS232_In_Deserializer" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer"
@@ -667,7 +683,7 @@ Info: Found 1 design units, including 1 entities, in source file db/cntr_e5b.tdf
     Info: Found entity 1: cntr_e5b
 Info: Elaborating entity "cntr_e5b" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_In_Deserializer:RS232_In_Deserializer|Altera_UP_SYNC_FIFO:RS232_In_FIFO|scfifo:Sync_FIFO|scfifo_ou31:auto_generated|a_dpfifo_bm31:dpfifo|cntr_e5b:wr_ptr"
 Info: Elaborating entity "Altera_UP_RS232_Out_Serializer" for hierarchy "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer"
-Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: 9 registers lost all their fanouts during netlist optimizations. The first 9 are displayed below.
     Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[6]" lost all its fanouts during netlist optimizations.
     Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[5]" lost all its fanouts during netlist optimizations.
@@ -678,20 +694,27 @@ Info: 9 registers lost all their fanouts during netlist optimizations. The first
     Info: Register "Altera_UP_Avalon_RS232:comb_6|Altera_UP_RS232_Out_Serializer:RS232_Out_Serializer|fifo_write_space[0]" lost all its fanouts during netlist optimizations.
     Info: Register "Altera_UP_Avalon_RS232:comb_6|read_interrupt_en" lost all its fanouts during netlist optimizations.
     Info: Register "Altera_UP_Avalon_RS232:comb_6|write_interrupt_en" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/pwn_bot.map.smsg
 Info: Generating hard_block partition "hard_block:auto_generated_inst"
 Warning: Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info: Implemented 338 device resources after synthesis - the final resource count might be different
+Info: Implemented 359 device resources after synthesis - the final resource count might be different
     Info: Implemented 6 input pins
-    Info: Implemented 1 output pins
-    Info: Implemented 315 logic cells
+    Info: Implemented 8 output pins
+    Info: Implemented 329 logic cells
     Info: Implemented 16 RAM segments
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 250 megabytes
-    Info: Processing ended: Sun Mar 18 16:09:28 2012
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 251 megabytes
+    Info: Processing ended: Sun Mar 18 23:23:01 2012
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:08
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Documents and Settings/Administrator/Desktop/Bad-Robot-connect_six-ddbdb6a/pwn_bot.map.smsg.
 
 
